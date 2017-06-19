@@ -2,6 +2,9 @@
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><%= link_to(guest.name, guest_path(guest)) %></li>
   <% end %>
 </ul>
+
+<%= link_to("Add New", new_guest_path) %><br>
+<%= link_to("Back", welcome_path) %>

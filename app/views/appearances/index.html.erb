@@ -1,0 +1,11 @@
+<h1>All Appearances</h1>
+
+<ul>
+  <% @appearances.each do |appearance| %>
+    <li><%= link_to("Appearance #{appearance.guest.name} - #{appearance.episode.date}", appearance_path(appearance))%></li>
+  <% end %>
+</ul>
+
+
+<%= link_to("Add New", new_appearance_path) %><br>
+<%= link_to("Back", welcome_path) %>

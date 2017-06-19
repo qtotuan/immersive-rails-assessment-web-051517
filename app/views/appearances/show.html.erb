@@ -1,0 +1,6 @@
+<h1>Guest: <%= @appearance.guest.name %></h1>
+<p>Episode: <%= @appearance.episode.date %></p>
+
+<%= link_to("Back", appearances_path) %><br>
+<%= link_to("Edit", edit_appearance_path) %><br>
+<%= link_to("Delete", @appearance, method: :delete) %><br>

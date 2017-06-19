@@ -1,0 +1,27 @@
+<h1><%= @guest.name %></h1>
+<p><%= @guest.occupation %></p>
+
+<h2>Episodes</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Number</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @guest.episodes.each do |episode| %>
+  <tr>
+      <td><%= episode.id %></td>
+      <td><%= episode.date %></td>
+      <td><%= episode.number %></td>
+      <td><%= link_to("Details", episode_path(episode)) %></td>
+      <td><%= link_to("Delete", episode, method: :delete) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to("Back", guests_path) %><br>
+<%= link_to("Edit", edit_guest_path) %><br>
+<%= link_to("Delete", @guest, method: :delete) %><br>

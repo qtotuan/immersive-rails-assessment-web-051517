@@ -1,0 +1,13 @@
+<%= form_for(@guest) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :occupation %>
+  <%= f.text_field :occupation %><br><br>
+
+  <%= f.submit %>
+
+<% end %>
+
+<%= link_to("Cancel", appearances_path) %>

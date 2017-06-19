@@ -1,0 +1,14 @@
+<%= form_for(@episode) do |f| %>
+
+  <%= f.label :date %>
+  <%= f.date_field :date %><br><br>
+
+  <%= f.label :number %>
+  <%= f.text_field :number %><br><br>
+
+  <%= f.submit %>
+
+<% end %>
+
+
+<%= link_to("Cancel", episodes_path) %>
